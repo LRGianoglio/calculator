@@ -1,34 +1,20 @@
 // reducer.ts
-import { ADD_TODO, DELETE_TODO } from './types';
-import { TodoAction } from './actions';
+import { BUTTON_PRESS } from './types';
+import { CalculatorAction, InitialState } from './interfaces';
 
-interface Todo {
-  id: number;
-  text: string;
-}
-
-interface TodoState {
-  todos: Todo[];
-}
-
-const initialState: TodoState = {
-  todos: [],
+const initialState: InitialState = {
+  screen: "placeholder",
 };
 
-const todoReducer = (state = initialState, action: TodoAction): TodoState => {
+const todoReducer = (state = initialState, action: CalculatorAction): InitialState => {
   switch (action.type) {
-    case ADD_TODO:
+    case BUTTON_PRESS:
       return {
         ...state,
-        todos: [...state.todos, { id: state.todos.length + 1, text: action.payload.text }],
-      };
-    case DELETE_TODO:
-      return {
-        ...state,
-        todos: state.todos.filter((todo) => todo.id !== action.payload.id),
+        screen: action.payload,
       };
     default:
-      return state;
+      return {...state};
   }
 };
 

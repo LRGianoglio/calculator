@@ -1,0 +1,27 @@
+.Screen{
+  height: 80px;
+  width: 360px;
+  margin-top: 10px;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Scientific Calculator LCD', sans-serif;
+  padding: 10px;
+}
+
+.FirstLine{
+  width: 100%;
+  text-align: end;
+  font-size: 20px;
+  margin: 0;
+  letter-spacing: -4px;
+}
+
+.SecondLine{
+  width: 100%;
+  text-align: end;
+  font-size: 32px;
+  margin: 0;
+  letter-spacing: -6px;
+}
