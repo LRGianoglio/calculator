@@ -3,7 +3,8 @@ import { BUTTON_PRESS } from './types';
 import { CalculatorAction, InitialState } from './interfaces';
 
 const initialState: InitialState = {
-  screen: "placeholder",
+  screen: "",
+  resultScreen: "0"
 };
 
 const todoReducer = (state = initialState, action: CalculatorAction): InitialState => {

@@ -1,0 +1,40 @@
+.Buttons{
+  margin-top: 5px;
+  height: 380px;
+  width: 98%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+button{
+  color: white;
+  font-family: Share Tech Mono, monospace;
+  font-weight: 700;
+  font-size: large;
+  border: none;
+  cursor: pointer;
+}
+
+.ACButton{
+  grid-column: span 2;
+  background-color: rgb(42, 61, 42);
+}
+
+.OPButton{
+  background-color: rgb(59, 59, 59);
+}
+
+.EqButton{
+  grid-row: span 2;
+  background-color: rgb(37, 37, 42);
+}
+
+.NumButton{
+  background-color: rgb(61, 61, 81);
+}
+
+.ZeroButton {
+  grid-column: span 2;
+  background-color: rgb(61, 61, 81);
+}

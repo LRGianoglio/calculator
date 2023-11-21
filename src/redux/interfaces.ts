@@ -2,6 +2,7 @@ import { BUTTON_PRESS } from "./types";
 
 export interface InitialState{
     screen: string;
+    resultScreen: string;
 }
 
 export type CalculatorAction = SetScreen;
