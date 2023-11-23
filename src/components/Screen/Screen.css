@@ -16,6 +16,8 @@
   font-size: 20px;
   margin: 0;
   letter-spacing: -4px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .SecondLine{
@@ -24,4 +26,6 @@
   font-size: 32px;
   margin: 0;
   letter-spacing: -6px;
+  overflow: hidden;
+  white-space: nowrap;
 }

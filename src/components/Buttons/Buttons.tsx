@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { SetScreenText } from '../../redux/actions';
+import { numberPress, operationPress, pointPress, acPress, equalPress } from '../../redux/actions';
 import './Buttons.css'
 
 function Buttons() {
@@ -7,7 +7,19 @@ function Buttons() {
   const dispatch = useDispatch()
 
   const handleClick = (key: string) =>{
-    dispatch(SetScreenText(key));
+    switch (key){
+      case "AC":
+        console.log("apretaste AC")
+        break;
+      case "=":
+        console.log("apretaste =")
+        break;
+      case ".":
+        console.log("apretaste el puntito");
+        break;
+      default:
+        dispatch(numberPress(key));
+    }
   }
 
   return (

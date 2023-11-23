@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import './Screen.css'
-import { InitialState } from '../../redux/interfaces';
+import { InitialState } from '../../interfaces';
 
 function Screen() {
 
@@ -9,8 +9,8 @@ function Screen() {
 
   return (
     <div className='Screen'>
-      <p className='FirstLine'>{screen}</p>
-      <p className='SecondLine'>{resultScreen}</p>
+      <p className='FirstLine'>{screen}</p> {/* 20 coso */}
+      <p className='SecondLine'>{resultScreen}</p> {/* 12 coso */}
     </div>
   );
 }
