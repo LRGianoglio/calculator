@@ -12,7 +12,7 @@ const todoReducer = (state = initialState, action: CalculatorAction): InitialSta
     case BUTTON_PRESS:
       return {
         ...state,
-        screen: action.payload,
+        screen: state.screen + action.payload,
       };
     default:
       return {...state};

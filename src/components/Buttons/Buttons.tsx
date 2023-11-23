@@ -1,9 +1,13 @@
+import { useDispatch } from 'react-redux';
+import { SetScreenText } from '../../redux/actions';
 import './Buttons.css'
 
 function Buttons() {
+  
+  const dispatch = useDispatch()
 
   const handleClick = (key: string) =>{
-    console.log(key)
+    dispatch(SetScreenText(key));
   }
 
   return (
