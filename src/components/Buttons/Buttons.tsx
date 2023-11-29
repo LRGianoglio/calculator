@@ -9,13 +9,19 @@ function Buttons() {
   const handleClick = (key: string) =>{
     switch (key){
       case "AC":
-        console.log("apretaste AC")
+        dispatch(acPress())
         break;
       case "=":
-        console.log("apretaste =")
+        dispatch(equalPress())
         break;
       case ".":
-        console.log("apretaste el puntito");
+        dispatch(pointPress())
+        break;
+      case "/":
+      case "x":
+      case "-":
+      case "+":
+        dispatch(operationPress(key))
         break;
       default:
         dispatch(numberPress(key));

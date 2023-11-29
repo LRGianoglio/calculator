@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import './Screen.css'
 import { InitialState } from '../../interfaces';
+import { resultScreenTrimmer } from '../../utils/utils';
 
 function Screen() {
 
@@ -10,7 +11,7 @@ function Screen() {
   return (
     <div className='Screen'>
       <p className='FirstLine'>{screen}</p> {/* 20 coso */}
-      <p className='SecondLine'>{resultScreen}</p> {/* 12 coso */}
+      <p className='SecondLine'>{resultScreenTrimmer(resultScreen)}</p> {/* 12 coso */}
     </div>
   );
 }
