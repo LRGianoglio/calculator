@@ -10,6 +10,7 @@ const initialState: InitialState = {
 const todoReducer = (state = initialState, action: CalculatorActions): InitialState => {
   switch (action.type) {
     case NUMBER_PRESS:
+      if (action.payload === "0" && state.screen==="0") return {...state}
       return {
         ...state,
         screen: state.screen + action.payload,
@@ -30,9 +31,19 @@ const todoReducer = (state = initialState, action: CalculatorActions): InitialSt
         resultScreen: "AC"
       }
     case EQUAL_PRESS:
+      const arrayedfiedOperation: string[] = state.screen.split(/([+\-x/])/).filter(token => token.trim() !== '');
+      let endResult:number | string = 666;
+      if (arrayedfiedOperation.length === 1) {
+        endResult = parseFloat(arrayedfiedOperation[0]) + 0
+      } else {
+        for (let i:number = 0; i<arrayedfiedOperation.length; i++){
+
+        }
+      };
+      
       return{
         ...state,
-        resultScreen: "EQUAL"
+        resultScreen: endResult.toString()
       }
     default:
       return {...state};
